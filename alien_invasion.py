@@ -53,7 +53,6 @@ class AlienInvasion:
 
     def _update_screen(self):
         # draw the ship
-
         self.ship.blitme()
         # make the most recently drawn screen visible.
         pygame.display.flip()

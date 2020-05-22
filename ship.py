@@ -1,6 +1,6 @@
 import pygame
 from settings import Settings
-
+import time
 
 class Ship:
     """A class to mange the ship."""
@@ -21,12 +21,16 @@ class Ship:
         # Start each new ship at the bottom center of the screen.
         self.rect.midbottom = self.screen_rect.midbottom
 
+        Clock = pygame.time.Clock()
+        self.delta = Clock.tick(60) / 1000
+
     def update(self):
         """Update the ship's position based on the movement flag."""
         if self.moving_right:
-            self.rect.x += 1.5
+            self.rect.x += 1 * self.delta
         if self.moving_left:
-            self.rect.x -= .5
+            self.rect.x -= 1 * self.delta
+        self.rect.x = int(self.rect.x)
 
     def blitme(self):
         """Draw the ship at its current location."""
