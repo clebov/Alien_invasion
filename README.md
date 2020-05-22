@@ -10,5 +10,9 @@ ideas as i go along
 ---
 created `alien_invasion.py`, `settings.py`, `ship.py`
 
+5/21/2020
+---
+added a background to the game    
+currently tackling the trail issue with the ship
 
-
+![](redTrail.gif)
