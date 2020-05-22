@@ -39,16 +39,16 @@ class AlienInvasion:
                 # if the exit button on screen is clicked close the program
                 sys.exit()
             elif event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_RIGHT:
+                if (event.key == pygame.K_RIGHT) or (event.key == pygame.K_d):
                     # if right arrow is pressed move right.
                     self.ship.moving_right = True
-                elif event.key == pygame.K_LEFT:
+                elif (event.key == pygame.K_LEFT) or (event.key == pygame.K_a):
                     # if left arrow is pressed move left
                     self.ship.moving_left = True
             elif event.type == pygame.KEYUP:
-                if event.key == pygame.K_RIGHT:
+                if (event.key == pygame.K_RIGHT) or (event.key == pygame.K_d):
                     self.ship.moving_right = False
-                elif event.key == pygame.K_LEFT:
+                elif (event.key == pygame.K_LEFT) or (event.key == pygame.K_a):
                     self.ship.moving_left = False
 
     def _update_screen(self):

@@ -1,6 +1,6 @@
 import pygame
 from settings import Settings
-
+import time
 
 class Ship:
     """A class to mange the ship."""
@@ -11,7 +11,7 @@ class Ship:
         self.screen_rect = ai_game.screen.get_rect()
         self.settings = Settings()
         # Load the ship image and get its rect.
-        self.image = pygame.image.load('images/player-enemies/ufoBlue.png')
+        self.image = pygame.image.load('images/player-enemies/playerShip1_red.png')
         self.rect = self.image.get_rect()
 
         # create a flag to check if there is movement
@@ -26,9 +26,10 @@ class Ship:
         if self.moving_right:
             self.rect.x += 1
         if self.moving_left:
-            self.rect.x -= .5
+            self.rect.x -= 1
 
     def blitme(self):
         """Draw the ship at its current location."""
         self.screen.blit(self.settings.bg_img, self.rect, self.rect)  # clear the screen where the ship is
         self.screen.blit(self.image, self.rect)
+
