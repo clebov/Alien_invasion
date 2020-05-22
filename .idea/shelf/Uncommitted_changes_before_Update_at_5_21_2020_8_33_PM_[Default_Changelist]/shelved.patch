@@ -1,0 +1,167 @@
+Index: ship.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import pygame\r\n\r\n\r\nclass Ship:\r\n    \"\"\"A class to mange the ship.\"\"\"\r\n\r\n    def __init__(self, ai_game):\r\n        \"\"\"Initialize the ship and set its starting position.\"\"\"\r\n        self.screen = ai_game.screen\r\n        self.screen_rect = ai_game.screen.get_rect()\r\n\r\n        # Load the ship image and get its rect.\r\n        self.image = pygame.image.load('images/player-enemies/playerShip1_red.png')\r\n        self.rect = self.image.get_rect()\r\n\r\n        # Start each new ship at the bottom center of the screen.\r\n        self.rect.midbottom = self.screen_rect.midbottom\r\n\r\n    def blitme(self):\r\n        \"\"\"Draw the ship at its current location.\"\"\"\r\n        self.screen.blit(self.image, self.rect)\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ship.py	(revision 83f2aeae9b21bd0ebaa532e3a91e113ab87e6f8c)
++++ ship.py	(date 1590076814863)
+@@ -1,4 +1,5 @@
+ import pygame
++from settings import Settings
+ 
+ 
+ class Ship:
+@@ -8,14 +9,26 @@
+         """Initialize the ship and set its starting position."""
+         self.screen = ai_game.screen
+         self.screen_rect = ai_game.screen.get_rect()
+-
++        self.settings = Settings()
+         # Load the ship image and get its rect.
+         self.image = pygame.image.load('images/player-enemies/playerShip1_red.png')
+         self.rect = self.image.get_rect()
+ 
++        # create a flag to check if there is movement
++        self.moving_right = False
++        self.moving_left = False
++
+         # Start each new ship at the bottom center of the screen.
+         self.rect.midbottom = self.screen_rect.midbottom
+ 
++    def update(self):
++        """Update the ship's position based on the movement flag."""
++        if self.moving_right:
++            self.rect.x += 1.5
++        if self.moving_left:
++            self.rect.x -= .5
++
+     def blitme(self):
+         """Draw the ship at its current location."""
++        self.screen.blit(self.settings.bg_img, self.rect, self.rect)  # clear the screen where the ship is
+         self.screen.blit(self.image, self.rect)
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Alien_Invasion\r\nThis is a guided project from python crash course by Eric Mattews.  \r\n\r\nthe purpose of this project is learning how to use the pygame plugin as well as implementing the concepts in the book.\r\n   \r\nFor the project im using git to practice with version control and to properly document my work. ill try to add my own   \r\nideas as i go along   \r\n\r\n5/20/2020:\r\n---\r\ncreated `alien_invasion.py`, `settings.py`, `ship.py`\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- README.md	(revision 83f2aeae9b21bd0ebaa532e3a91e113ab87e6f8c)
++++ README.md	(date 1590083090752)
+@@ -10,5 +10,9 @@
+ ---
+ created `alien_invasion.py`, `settings.py`, `ship.py`
+ 
+-
++5/21/2020
++---
++added a background to the game    
++currently tackling the trail issue with the ship
+ 
++![](redTrail.gif)
+\ No newline at end of file
+Index: alien_invasion.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"\"\" create an empty pygame window by creating a class to represent the game\"\"\"\r\nimport sys\r\n\r\nimport pygame\r\n\r\nfrom settings import Settings\r\nfrom ship import Ship\r\n\r\n\r\nclass AlienInvasion:\r\n    \"\"\"Overall class to mange game assets and behavior.\"\"\"\r\n\r\n    def __init__(self):\r\n        \"\"\"initialize the game, and create game resources.\"\"\"\r\n        pygame.init()\r\n\r\n        # create the game screen with the size of 1200x800 from settings.py then assign it to an attribute to call\r\n        # throughout the program\r\n        self.settings = Settings()\r\n        self.screen = pygame.display.set_mode((self.settings.screen_width, self.settings.screen_height))\r\n        pygame.display.set_caption(\"Alien Invasion\")\r\n        self.ship = Ship(self)\r\n\r\n    def run_game(self):\r\n        \"\"\"Start the main loop for the game\"\"\"\r\n        while True:\r\n            self._check_events()\r\n            self._update_screen()\r\n\r\n\r\n    def _check_events(self):\r\n        \"\"\"respond to key presses and mouse events.\"\"\"\r\n        for event in pygame.event.get():\r\n            if event.type == pygame.QUIT:\r\n                # if the exit button on screen is clicked close the program\r\n                sys.exit()\r\n\r\n    def _update_screen(self):\r\n        # redraw the screen during each pass thought the loop and Set the background color from settings.py.\r\n        self.screen.fill(self.settings.bg_color)\r\n        self.ship.blitme()\r\n        # make the most recently drawn screen visible.\r\n        pygame.display.flip()\r\n\r\n\r\nif __name__ == '__main__':\r\n    # make a game instance, and run the game.\r\n    ai = AlienInvasion()\r\n    ai.run_game()\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- alien_invasion.py	(revision 83f2aeae9b21bd0ebaa532e3a91e113ab87e6f8c)
++++ alien_invasion.py	(date 1590078263901)
+@@ -17,27 +17,43 @@
+         # create the game screen with the size of 1200x800 from settings.py then assign it to an attribute to call
+         # throughout the program
+         self.settings = Settings()
++        # draw the background image
+         self.screen = pygame.display.set_mode((self.settings.screen_width, self.settings.screen_height))
+         pygame.display.set_caption("Alien Invasion")
++
+         self.ship = Ship(self)
+ 
+     def run_game(self):
+         """Start the main loop for the game"""
++        # redraw the screen during each pass thought the loop and Set the background color from settings.py.
++        self.screen.blit(self.settings.bg_img, (0, 0))
+         while True:
+             self._check_events()
++            self.ship.update()
+             self._update_screen()
+ 
+-
+     def _check_events(self):
+         """respond to key presses and mouse events."""
+         for event in pygame.event.get():
+             if event.type == pygame.QUIT:
+                 # if the exit button on screen is clicked close the program
+                 sys.exit()
++            elif event.type == pygame.KEYDOWN:
++                if event.key == pygame.K_RIGHT:
++                    # if right arrow is pressed move right.
++                    self.ship.moving_right = True
++                elif event.key == pygame.K_LEFT:
++                    # if left arrow is pressed move left
++                    self.ship.moving_left = True
++            elif event.type == pygame.KEYUP:
++                if event.key == pygame.K_RIGHT:
++                    self.ship.moving_right = False
++                elif event.key == pygame.K_LEFT:
++                    self.ship.moving_left = False
+ 
+     def _update_screen(self):
+-        # redraw the screen during each pass thought the loop and Set the background color from settings.py.
+-        self.screen.fill(self.settings.bg_color)
++        # draw the ship
++
+         self.ship.blitme()
+         # make the most recently drawn screen visible.
+         pygame.display.flip()
+Index: settings.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>class Settings:\r\n    \"\"\"A class to store all settings for Alien Invasion\"\"\"\r\n\r\n    def __init__(self):\r\n        \"\"\"Initialize the games's settings.\"\"\"\r\n        # Screen settings\r\n        self.screen_width = 1200\r\n        self.screen_height = 800\r\n        self.bg_color = (230, 230, 230)
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- settings.py	(revision 83f2aeae9b21bd0ebaa532e3a91e113ab87e6f8c)
++++ settings.py	(date 1590076064027)
+@@ -1,3 +1,6 @@
++import pygame
++
++
+ class Settings:
+     """A class to store all settings for Alien Invasion"""
+ 
+@@ -6,4 +9,6 @@
+         # Screen settings
+         self.screen_width = 1200
+         self.screen_height = 800
+-        self.bg_color = (230, 230, 230)
+\ No newline at end of file
++        self.bg_color = (230, 230, 230)
++        self.bg_img = pygame.image.load("images/background/black_2.png")
++        self.bg_color = (230, 230, 230)
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectModuleManager\">\r\n    <modules>\r\n      <module fileurl=\"file://$PROJECT_DIR$/.idea/Aliean_invasion.iml\" filepath=\"$PROJECT_DIR$/.idea/Aliean_invasion.iml\" />\r\n    </modules>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules.xml	(revision 83f2aeae9b21bd0ebaa532e3a91e113ab87e6f8c)
++++ .idea/modules.xml	(date 1590110199730)
+@@ -2,7 +2,7 @@
+ <project version="4">
+   <component name="ProjectModuleManager">
+     <modules>
+-      <module fileurl="file://$PROJECT_DIR$/.idea/Aliean_invasion.iml" filepath="$PROJECT_DIR$/.idea/Aliean_invasion.iml" />
++      <module fileurl="file://$PROJECT_DIR$/.idea/Alien_invasion.iml" filepath="$PROJECT_DIR$/.idea/Alien_invasion.iml" />
+     </modules>
+   </component>
+ </project>
+\ No newline at end of file
+diff --git .idea/Aliean_invasion.iml .idea/Alien_invasion.iml
+rename from .idea/Aliean_invasion.iml
+rename to .idea/Alien_invasion.iml
