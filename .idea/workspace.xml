@@ -7,16 +7,25 @@
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc003c33-fb99-4a7b-b9b7-755beb8b2703" name="Default Changelist" comment="updating code. working on ship trail issue">
+      <change afterPath="$PROJECT_DIR$/bullet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/player-enemies/playerShip2_blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/player-enemies/playerShip3_green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/player-enemies/ufoYellow.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alien_invasion.py" beforeDir="false" afterPath="$PROJECT_DIR$/alien_invasion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/player-enemies/ufoBlue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/player-enemies/ufoGreen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/player-enemies/ufoRed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/player-enemies/ufoYellow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/background/black_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ship.py" beforeDir="false" afterPath="$PROJECT_DIR$/ship.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +45,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/aliean_invasion.py" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="RunManager">
     <configuration name="alien_invasion" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -143,7 +152,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -174,30 +195,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589904711102" />
-    <state width="258" height="595" key="GridCell.Tab.0.bottom" timestamp="1590115782710">
+    <state width="750" height="882" key="GridCell.Tab.0.bottom" timestamp="1590194625164">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="258" height="595" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590115782710" />
+    <state width="750" height="882" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590194625164" />
     <state width="635" height="912" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590021851034" />
-    <state width="258" height="912" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590076707218" />
-    <state width="258" height="595" key="GridCell.Tab.0.center" timestamp="1590115782710">
+    <state width="750" height="882" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590178327852" />
+    <state width="750" height="882" key="GridCell.Tab.0.center" timestamp="1590194625163">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="258" height="595" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590115782710" />
+    <state width="750" height="882" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590194625163" />
     <state width="635" height="912" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590021851033" />
-    <state width="258" height="912" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590076707218" />
-    <state width="258" height="595" key="GridCell.Tab.0.left" timestamp="1590115782710">
+    <state width="750" height="882" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590178327852" />
+    <state width="750" height="882" key="GridCell.Tab.0.left" timestamp="1590194625163">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="258" height="595" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590115782710" />
+    <state width="750" height="882" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590194625163" />
     <state width="635" height="912" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590021851033" />
-    <state width="258" height="912" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590076707217" />
-    <state width="258" height="595" key="GridCell.Tab.0.right" timestamp="1590115782710">
+    <state width="750" height="882" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590178327852" />
+    <state width="750" height="882" key="GridCell.Tab.0.right" timestamp="1590194625164">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="258" height="595" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590115782710" />
+    <state width="750" height="882" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590194625164" />
     <state width="635" height="912" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590021851034" />
-    <state width="258" height="912" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590076707218" />
+    <state width="750" height="882" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590178327852" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1590073603922">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -218,10 +239,11 @@
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590023178876" />
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590073603922" />
-    <state x="2381" y="164" key="SettingsEditor" timestamp="1590110928907">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1590176221580">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="2381" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590110928907" />
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590176221580" />
     <state x="343" y="126" width="1205" height="535" key="Vcs.Push.Dialog.v2" timestamp="1590114296499">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -234,6 +256,10 @@
     <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590112296223" />
     <state x="2689" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590112028387" />
     <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589911042769" />
+    <state x="953" y="0" width="974" height="1047" key="dock-window-1" timestamp="1590176274184">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="953" y="0" width="974" height="1047" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1590176274184" />
     <state x="2619" y="309" key="git4idea.ui.GitUnstashDialog" timestamp="1590112067360">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
