@@ -16,15 +16,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc003c33-fb99-4a7b-b9b7-755beb8b2703" name="Default Changelist" comment="updating code. working on ship trail issue">
-      <change afterPath="$PROJECT_DIR$/bullet.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/player-enemies/playerShip2_blue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/player-enemies/playerShip3_green.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/player-enemies/ufoYellow.png" afterDir="false" />
+    <list default="true" id="dc003c33-fb99-4a7b-b9b7-755beb8b2703" name="Default Changelist" comment="fixed red trail from ship. but now experiencing a shadow effect/line left after firing a bullet.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alien_invasion.py" beforeDir="false" afterPath="$PROJECT_DIR$/alien_invasion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/background/black_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bullet.py" beforeDir="false" afterPath="$PROJECT_DIR$/bullet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ship.py" beforeDir="false" afterPath="$PROJECT_DIR$/ship.py" afterDir="false" />
     </list>
@@ -47,7 +42,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/aliean_invasion.py" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
     <configuration name="alien_invasion" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Alien_invasion" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -69,6 +64,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Alien_invasion" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -144,7 +165,21 @@
       <option name="project" value="LOCAL" />
       <updated>1590114289807</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="updating code. working on ship trail issue">
+      <created>1590194873297</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1590194873297</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fixed red trail from ship. but now experiencing a shadow effect/line left after firing a bullet.">
+      <created>1590194968385</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1590194968385</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -176,15 +211,20 @@
     <MESSAGE value="created the main driving file that generates a white screen for the game" />
     <MESSAGE value="created alien_invasion.py, settings.py, ship.py, as well as add images to be used in game" />
     <MESSAGE value="updating code. working on ship trail issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating code. working on ship trail issue" />
+    <MESSAGE value="fixed red trail from ship. but now experiencing a shadow effect/line left after firing a bullet." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed red trail from ship. but now experiencing a shadow effect/line left after firing a bullet." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2634" y="1" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590110922089">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590211385368">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1589930541869" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590211385368" />
     <state x="2634" y="1" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590110922089" />
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589904725728" />
+    <state x="210" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590387068035">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="210" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590387068035" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1590112269667">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -195,28 +235,28 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589904711102" />
-    <state width="750" height="882" key="GridCell.Tab.0.bottom" timestamp="1590194625164">
+    <state width="863" height="912" key="GridCell.Tab.0.bottom" timestamp="1590387936512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="750" height="882" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590194625164" />
+    <state width="863" height="912" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590387936512" />
     <state width="635" height="912" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590021851034" />
     <state width="750" height="882" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590178327852" />
-    <state width="750" height="882" key="GridCell.Tab.0.center" timestamp="1590194625163">
+    <state width="863" height="912" key="GridCell.Tab.0.center" timestamp="1590387936512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="750" height="882" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590194625163" />
+    <state width="863" height="912" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590387936512" />
     <state width="635" height="912" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590021851033" />
     <state width="750" height="882" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590178327852" />
-    <state width="750" height="882" key="GridCell.Tab.0.left" timestamp="1590194625163">
+    <state width="863" height="912" key="GridCell.Tab.0.left" timestamp="1590387936512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="750" height="882" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590194625163" />
+    <state width="863" height="912" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590387936512" />
     <state width="635" height="912" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590021851033" />
     <state width="750" height="882" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590178327852" />
-    <state width="750" height="882" key="GridCell.Tab.0.right" timestamp="1590194625164">
+    <state width="863" height="912" key="GridCell.Tab.0.right" timestamp="1590387936512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="750" height="882" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590194625164" />
+    <state width="863" height="912" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590387936512" />
     <state width="635" height="912" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590021851034" />
     <state width="750" height="882" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590178327852" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1590073603922">
@@ -244,10 +284,10 @@
     </state>
     <state x="2381" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590110928907" />
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590176221580" />
-    <state x="343" y="126" width="1205" height="535" key="Vcs.Push.Dialog.v2" timestamp="1590114296499">
+    <state x="343" y="126" width="1205" height="535" key="Vcs.Push.Dialog.v2" timestamp="1590194978914">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="343" y="126" width="1205" height="535" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590114296499" />
+    <state x="343" y="126" width="1205" height="535" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590194978914" />
     <state x="2263" y="126" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1590112087160" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589911066872" />
     <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590112296223">
