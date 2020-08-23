@@ -13,6 +13,6 @@ class Settings:
         self.bg_squareImg = pygame.image.load('images/background/black.png')
         self.bg_color = (230, 230, 230)
         self.bullet_speed = 30
-
+        self.bullet_allowed = 3
         self.bullet_color = (0, 0, 255)
 
